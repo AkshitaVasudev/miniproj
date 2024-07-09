@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var oper,prev;
+function nums(s){
+var n1=parseInt(document.f1.t1.value);
+var sum=(n1*10)+s;
+document.f1.t1.value=sum;
+}
+
+function op(k){
+oper=k;
+prev=parseInt(document.f1.t1.value);
+document.f1.t1.value=0;
+}
+
+function mod(){
+var a =parseInt(document.f1.t1.value);
+var b=Math.floor(a/10);
+document.f1.t1.value=b;
+}
+
+function equals(){
+var curr=parseInt(document.f1.t1.value);
+switch(oper){
+case 1: var res=prev+curr;break;
+case 2: var res=prev-curr;break;
+case 3: var res=prev*curr;break;
+case 4: var res=prev/curr;break;
+case 5: var res=prev%curr;break;
+}
+document.f1.t1.value=res;
+}
+</script>
+</head>
+
+
+<body>
+<form name="f1">
+<table border="2" cellspacing=2 cellpadding=2 align="center">
+<tr>
+<td colspan="4"><input type="text" value="0" id="t1" name="t1"></td>
+
+</tr>
+<tr>
+<td><input type="button" value="1" id="1" onclick="nums(1)"></td>
+<td><input type="button" value="2" id="2" onclick="nums(2)"></td>
+<td><input type="button" value="3" id="3" onclick="nums(3)"></td>
+<td><input type="button" value="+" id="add" onclick="op(1)"></td>
+</tr>
+
+<tr>
+<td><input type="button" value="5" id="5" onclick="nums(5)"></td>
+<td><input type="button" value="6" id="6" onclick="nums(6)"></td>
+<td><input type="button" value="7" id="7" onclick="nums(7)"></td>
+<td><input type="button" value="-" id="minus" onclick="op(2)"></td>
+</tr>
+
+
+
+<tr>
+<td><input type="button" value="8" id="8" onclick="nums(8)"></td>
+<td><input type="button" value="9" id="9" onclick="nums(9)"></td>
+<td><input type="button" value="0" id="10" onclick="nums(0)"></td>
+<td><input type="button" value="*" id="mul" onclick="op(3)"></td>
+</tr>
+
+
+
+<tr>
+<td><input type="button" value="/" id="div" onclick="op(4)"></td>
+<td><input type="button" value="%" id="per" onclick="op(5)"></td>
+
+<td><input type="button" value="=" id="eq" onclick="equals()"></td>
+</tr>
+
+<tr>
+<td><input type="reset" value="C" id="c" ></td>
+<td><input type="button" value="<--" id="mod" onclick="mod()"></td>
+</tr>
+
+</table>
+</form>
+</body>
+</html>
+
+
+
+
+

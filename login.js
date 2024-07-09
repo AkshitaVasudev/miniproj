@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+	function vali(){
+	var u=document.f1.u.value;
+	var p=document.f1.p.value;
+	if (u=="MVSR" && p=="123"){
+	window.location.href="success.html";
+	}
+	else{
+	window.location.href="fail.html";
+	}
+	}
+</script>
+
+
+<body>
+<form name="f1">
+<table align="center" border="5">
+<tr>
+<td>USERNAME</td>
+<td><input type="text" name="u" id="u"> </td>
+</tr>
+
+<tr>
+<td>PASSWORD</td>
+<td><input type="password" name="p" id="p"></td>
+</tr>
+
+<tr>
+<td><button type="submit" onclick="vali()">SUBMIT</button>
+<td><input type="reset" value="RESET"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

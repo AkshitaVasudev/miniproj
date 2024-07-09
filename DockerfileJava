@@ -1,0 +1,5 @@
+FROM openjdk:11
+WORKDIR /app
+COPY ./JavaDocker.java .
+RUN javac JavaDocker.java
+CMD ["java","JavaDocker"]
